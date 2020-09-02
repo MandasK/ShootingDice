@@ -59,9 +59,14 @@ namespace ShootingDice
             SoreLoserPlayer sadBoi = new SoreLoserPlayer();
             sadBoi.Name = "Brandon";
 
-            sadBoi.Play(large);
+            sadBoi.Play(player2);
             Console.WriteLine("-------------------");
 
+            UpperHalfPlayer cheater = new UpperHalfPlayer();
+            cheater.Name = "Andy";
+
+            cheater.Play(player2);
+            Console.WriteLine("-------------------");
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -71,7 +76,8 @@ namespace ShootingDice
                 mackthesmack,
                 highBall,
                 dumbmortal,
-                sadBoi
+                sadBoi,
+                cheater
             };
 
             PlayMany(players);
