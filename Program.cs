@@ -45,6 +45,11 @@ namespace ShootingDice
             highBall.Play(player3);
             Console.WriteLine("-------------------");
 
+            HumanPlayer dumbmortal = new HumanPlayer();
+            dumbmortal.Name = "BillyBob";
+
+            dumbmortal.Play(large);
+            Console.WriteLine("-------------------");
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -52,7 +57,8 @@ namespace ShootingDice
                 player3,
                 large,
                 mackthesmack,
-                highBall
+                highBall,
+                dumbmortal
             };
 
             PlayMany(players);
