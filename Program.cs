@@ -50,6 +50,18 @@ namespace ShootingDice
 
             dumbmortal.Play(large);
             Console.WriteLine("-------------------");
+
+            CreativeSmackTalkingPlayer Mack2 = new CreativeSmackTalkingPlayer();
+            Mack2.Name = "Mackie";
+            Mack2.Play(player1);
+            Console.WriteLine("-------------------");
+
+            SoreLoserPlayer sadBoi = new SoreLoserPlayer();
+            sadBoi.Name = "Brandon";
+
+            sadBoi.Play(large);
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -58,7 +70,8 @@ namespace ShootingDice
                 large,
                 mackthesmack,
                 highBall,
-                dumbmortal
+                dumbmortal,
+                sadBoi
             };
 
             PlayMany(players);
