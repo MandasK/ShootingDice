@@ -32,8 +32,20 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+            SmackTalkingPlayer mackthesmack = new SmackTalkingPlayer();
+            mackthesmack.Name = "Mack";
+            mackthesmack.Taunt = "You're a loser who always loses.";
+
+            mackthesmack.Play(player2);
+            Console.WriteLine("-------------------");
+
+            List<Player> players = new List<Player>()
+            {
+                player1,
+                player2,
+                player3,
+                large,
+                mackthesmack
             };
 
             PlayMany(players);
