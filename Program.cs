@@ -67,6 +67,14 @@ namespace ShootingDice
 
             cheater.Play(player2);
             Console.WriteLine("-------------------");
+
+            SoreLoserUpperHalfPlayer grumpiBoi = new SoreLoserUpperHalfPlayer();
+            grumpiBoi.Name = "YoMomma";
+            grumpiBoi.Taunt = "You suck.";
+
+            grumpiBoi.Play(player2);
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -77,7 +85,8 @@ namespace ShootingDice
                 highBall,
                 dumbmortal,
                 sadBoi,
-                cheater
+                cheater,
+                grumpiBoi
             };
 
             PlayMany(players);

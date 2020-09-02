@@ -10,7 +10,7 @@ namespace ShootingDice
         public override int Roll()
         {
             // Return a random number between 1 and DiceSize
-            return new Random().Next(DiceSize) + 3;
+            return new Random().Next(3, DiceSize);
         }
     }
 }
