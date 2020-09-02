@@ -39,13 +39,20 @@ namespace ShootingDice
             mackthesmack.Play(player2);
             Console.WriteLine("-------------------");
 
+            OneHigherPlayer highBall = new OneHigherPlayer();
+            highBall.Name = "Willie";
+
+            highBall.Play(player3);
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>()
             {
                 player1,
                 player2,
                 player3,
                 large,
-                mackthesmack
+                mackthesmack,
+                highBall
             };
 
             PlayMany(players);
