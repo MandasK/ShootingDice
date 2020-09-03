@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace ShootingDice
 {
+
     // A SmackTalkingPlayer who randomly selects a taunt from a list to say to the other player
     public class CreativeSmackTalkingPlayer : Player
     {
@@ -14,17 +15,23 @@ namespace ShootingDice
             "BOOOOOOOOOOOO. You're gonna lose!",
             "You can't even count to 6 much less roll one!"
         };
-        public override void Play(Player other)
-        {
 
+        public override int Roll()
+        {
+            // Return a random number between 1 and DiceSize
+            return new Random().Next(DiceSize) + 1;
             Random rNum = new Random();
             int numIndex = rNum.Next(tauntList.Count);
+            Console.WriteLine($"{tauntList[numIndex]}");
+        }
+        public override void Play(Player other)
+        {
 
             // Call roll for "this" object and for the "other" object
             int myRoll = Roll();
             int otherRoll = other.Roll();
 
-            Console.WriteLine($"{Name} rolls a {myRoll}  {tauntList[numIndex]}");
+            Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
             if (myRoll > otherRoll)
             {
